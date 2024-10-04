@@ -7,6 +7,7 @@ import AboutMe from './pages/AboutMe';
 import Menu from './pages/Menu';
 import Meals from './pages/Meals';
 import Favorites from './pages/Favorites';
+import PDFFile from './pages/pdf'
 import MealGenerator from './pages/MealGenerator';
 
 export const routes = [
@@ -15,6 +16,7 @@ export const routes = [
   { path: '/menu', name: 'Menu', component: <Menu /> },
   { path: '/meals', name: 'Meals', component: <Meals /> },
   { path: '/favorites', name: 'My Favorites', component: <Favorites /> },
+  { path: '/pdf', name: 'PDF File', component: <PDFFile /> },
   { path: '/meal-generator', name: 'Meal Generator', component: <MealGenerator /> },
 ];
 

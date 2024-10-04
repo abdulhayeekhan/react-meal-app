@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const AiwithText = () => {
-    const genAI = new GoogleGenerativeAI('AIzaSyDtiBA7Z3cIgjqzSktQUm0zGj3uQBAWuso');
+    const genAI = new GoogleGenerativeAI('AIzaSyCH3awRsEqo550KnHkgODiiffxL4DuMBo0');
 
     const [search, setSearch] = useState('');
     const [aiResponse, setResponse] = useState('');
@@ -15,7 +15,7 @@ const AiwithText = () => {
         setLoading(true);
         setResponse('');
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-        const prompt = `random meals related to ${search} category with images and prices`;
+        const prompt = search;
         const result = await model.generateContent(prompt);
         const response = await result.response;
         const text = response.text();

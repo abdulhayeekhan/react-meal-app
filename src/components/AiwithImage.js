@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { getBase64 } from '../helpers/imageHelper';
 
 const AiwithImage = () => {
-    const genAI = new GoogleGenerativeAI('AIzaSyDtiBA7Z3cIgjqzSktQUm0zGj3uQBAWuso');
+    const genAI = new GoogleGenerativeAI('AIzaSyCH3awRsEqo550KnHkgODiiffxL4DuMBo0');
 
     const [image, setImage] = useState('');
     const [imageInineData, setImageInlineData] = useState('');
@@ -53,7 +53,6 @@ const AiwithImage = () => {
             reader.onloadend = () => resolve(reader.result.split(',')[1]);
             reader.readAsDataURL(file);
         });
-
         return {
             inlineData: { data: await base64EncodedDataPromise, mimeType: file.type },
         };
